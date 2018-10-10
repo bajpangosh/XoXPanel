@@ -44,7 +44,7 @@ sudo apt-get -qq install nginx pwgen zip unzip php7.2-fpm php7.2-curl php7.2-gd 
 # Insert your script here
 for (( i=0; i<=50; i++ ))  
 do
-    showBar $i 50  #Call bar drawing function "showBar"
+    showBar $i 46  #Call bar drawing function "showBar"
     sleep .2
 done
 # End of your script
