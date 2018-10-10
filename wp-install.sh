@@ -4,6 +4,7 @@
 #   Please share with me your modifications
 # Note: From http://stackoverflow.com/questions/11592583/bash-progress-bar
 # Functions
+sudo apt-get -qq install bc
 PUT(){ echo -en "\033[${1};${2}H";}  
 DRAW(){ echo -en "\033%";echo -en "\033(0";}         
 WRITE(){ echo -en "\033(B";}  
@@ -32,16 +33,14 @@ clear
 HIDECURSOR
 echo -e ""                                           
 echo -e ""                                          
-DRAW    #magic starts here - must use caps in draw mode                                              
-echo -e "          PLEASE WAIT WHILE SCRIPT IS IN PROGRESS"
+DRAW    #magic starts here - must use caps in draw mode                                        
+echo -e "       PLEASE WAIT WHILE KLOUDBOY SCRIPT IS IN PROGRESS"
 echo -e "    lqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk"  
 echo -e "    x                                                   x" 
 echo -e "    mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj"
 WRITE             
 #
-
-sudo apt-get -qq install nginx pwgen zip unzip -y
-sudo apt-get -qq -y install php7.2-fpm php7.2-curl php7.2-gd php7.2-imap php7.2-readline php7.2-common php7.2-recode php7.2-mysql php7.2-cli php7.2-curl php7.2-mbstring php7.2-bcmath php7.2-mysql php7.2-opcache php7.2-zip php7.2-xml php-memcached php-imagick php-memcache memcached graphviz php-pear php-xdebug php-msgpack  php7.2-soap
+sudo apt-get -qq install nginx pwgen zip unzip php7.2-fpm php7.2-curl php7.2-gd php7.2-imap php7.2-readline php7.2-common php7.2-recode php7.2-mysql php7.2-cli php7.2-curl php7.2-mbstring php7.2-bcmath php7.2-mysql php7.2-opcache php7.2-zip php7.2-xml php-memcached php-imagick php-memcache memcached graphviz php-pear php-xdebug php-msgpack php7.2-soap mariadb-server mariadb-client php7.2-mysql > /dev/null
 # Insert your script here
 for (( i=0; i<=50; i++ ))  
 do
@@ -49,13 +48,11 @@ do
     sleep .2
 done
 # End of your script
-
-echo "Installation & configuration succesfully finished.
-Twitter: @TeamKloudboy
-e-mail: support@kloudboy.com
-Bye!"
-
 # Clean up at end of script
 PUT 10 12                                           
-echo -e ""                                        
+echo -e ""
+echo -e "Installation & configuration succesfully finished.
+Twitter: @TeamKloudboy
+e-mail: support@kloudboy.com
+Bye!"                                        
 NORM
