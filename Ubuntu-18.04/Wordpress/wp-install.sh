@@ -2,7 +2,7 @@
 # GET ALL USER INPUT
 echo "Domain Name (eg. example.com)?"
 read DOMAIN
-echo "Username (eg. valid email id for Let's Encrypt)?"
+echo "Email id (eg. valid email id for Let's Encrypt)?"
 read EMAIL
 echo "Username (eg. database name)?"
 read USERNAME
